@@ -2674,7 +2674,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-  padding-top: 23.2rem;
+  /*padding-top: 23.2rem;*/
+  padding-top: 6.2rem;
   padding-bottom: calc((62.4rem/2) + 6.4rem);
   /*background-color: #5b4f96;*/
   background-color: #000;
@@ -2818,8 +2819,9 @@ html.no-csstransitions .home-content__main {
 
 .video-bg {
   z-index: 1;
-  overflow: hidden;
-  height: 62.4rem;
+  /*overflow: hidden;*/
+  /*height: 62.4rem;*/
+  height: 67.4rem;
   margin-top: calc((62.4rem/2) * -1);
   /*background-image: url(../images/video-bg-2400.jpg);
   background-repeat: no-repeat;
@@ -4183,12 +4185,14 @@ html.no-csstransitions .home-content__main {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
+  height: 100%;
 }
 
 .video-container video {
   position: absolute;
   z-index: 0;
-  bottom: 0;
+  left: 0;
+  top: -356px;
 }
 
 .video-container video.fillWidth {
@@ -4207,4 +4211,54 @@ html.no-csstransitions .home-content__main {
   top: 0;
   left: 0;
   z-index: 9;
+  opacity: .4;
+  background-size: 8px;
+}
+
+.img-features {
+  position: absolute;
+  bottom: -8px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.final-price {
+  position: relative;
+}
+
+.final-price img {
+  margin-left: -120px;
+}
+
+.box-price {
+  position: absolute;
+  top: 29%;
+  right: 90px;
+  border: 1px solid #621708;
+  border-left: none;
+  border-radius: 10px;
+  padding: 10px 40px 0px 70px;
+  /*background: linear-gradient(45deg, black, transparent);*/
+  z-index: 1;
+}
+
+.garanta {
+  font-size: 30px;
+  color: #7e1426;
+  text-transform: uppercase;
+  text-shadow: 4px 3px 4px #dccd16, -4px -3px 4px #dc5f16;
+  font-weight: 600;
+}
+
+.price-de {
+  color: #BC3908;
+}
+
+.price-por {
+  color: #941B0C;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
 }
