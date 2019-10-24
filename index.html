@@ -64,11 +64,11 @@
                     <li><a class="smoothscroll" href="#about-how" title="features">Funcionalidades</a></li>
                     <li><a class="smoothscroll" href="#banner-section" title="features">Características</a></li>
                     <li><a class="smoothscroll" href="#features" title="pricing">Testimonials</a></li>
-                    <li><a class="smoothscroll" href="#download" title="download">Comprar</a></li>
+                    <li><a class="smoothscroll" href="#pricing" title="pricing">Comprar</a></li>
                 </ul>
     
                 <div class="header-cta">
-                    <a href="#download" class="btn btn--primary header-cta__btn smoothscroll font-size-20">Compre agora</a>
+                    <a href="#pricing" class="btn btn--primary header-cta__btn smoothscroll font-size-20">Compre agora</a>
                 </div>
             </nav> <!-- end header-nav-wrap -->
     
@@ -98,7 +98,7 @@
                     </h3>
     
                     <div class="home-content__btn-wrap">
-                        <a href="#download" class="btn btn--primary home-content__btn smoothscroll font-size-20">
+                        <a href="#pricing" class="btn btn--primary home-content__btn smoothscroll font-size-20">
                             Compre agora
                         </a>
                     </div>
@@ -106,7 +106,9 @@
 
                 <div class="home-content__right">
                     <!-- <img src="images/hero-app-screens-800.png" srcset="images/hero-app-screens-800.png 1x, images/hero-app-screens-1600.png 2x"> -->
-                    <img src="images/lp2-imgs/product-image-1024x1024.png" style="border: 2px solid #ffe400;">
+                    <!-- <img src="images/lp2-imgs/product-image-1024x1024.png" style="border: 2px solid #ffe400;"> -->
+                    <img id="ip" src="images/lp2-imgs/p.png">
+                    <img id="ipt" src="images/lp2-imgs/pt.png" style="display: none;">
                 </div> <!-- end home-content__right -->
 
             </div> <!-- end home-content__main -->
@@ -551,7 +553,7 @@
 
         <div class="row section-header align-center" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1">
+                <h1 class="display-1" style="color: #f1f1f1;">
                    🔥 SUPER COMBO PROMOCIONAL 🔥
                 </h1>
                 <p class="lead">
@@ -566,17 +568,31 @@
 
         <div class="row plans block-1-2 block-m-1-2 block-tab-full stack">
 
+            <div class="selos">
+                <img src="images/lp2-imgs/selos-gold.png"/>
+                <!-- <img src="images/lp-imgs/selo-compra-segura-150px.png"/>
+                <img src="images/lp-imgs/selo-garantia-30-dias-150px.png"/>
+                <img src="images/lp-imgs/selo-melhor-preco-dias-150px.png"/>
+                <img src="images/lp-imgs/selo-retorno-facil-150px.png"/>
+                <img src="images/lp-imgs/selo-satisfacao-150px.png"/>-->
+            </div>
+
             <div class="final-price">
-                <img src="images/lp2-imgs/product-image-1024x1024.png">
+                <img src="images/lp2-imgs/pdd.png">
                 <div class="box-price">
                     <span class="garanta">Garanta o seu</span><br />
-                    <span class="price-de">de R$ 399.99</span><br />
+                    <span class="price-de">de R$ 435,90</span><br />
                     <span>por</span><br />
-                    <h1 class="price-por">R$ 289.89</h1>
-                    <span class="vezes-de">10 vezes de 28,99 sem juros</span><br />
-                    <button class="btn">Comprar agora</button>
+                    <h1 class="price-por">R$ 289,89</h1>
+                    <!-- <button class="btn">Comprar agora</button> -->
+                    <div id='product-component-1571866932753'></div>
                 </div>
             </div>
+
+            <div class="bandeiras-cartao">
+                <img src="images/lp-imgs/bandeiras-cartao.png"/>
+            </div>
+
 
             <!-- <div class="col-block item-plan" data-aos="fade-up">
                 <div class="item-plan__block"> 
@@ -774,5 +790,245 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/video.js"></script>
+    
+    <script type="text/javascript">
+        (function () {
+          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+          if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+              ShopifyBuyInit();
+            } else {
+              loadScript();
+            }
+          } else {
+            loadScript();
+          }
+          function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+          }
+          function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+              domain: 'top-tec-store.myshopify.com',
+              storefrontAccessToken: '3ee53d476deb7d9dc51b47e976208944',
+            });
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+              ui.createComponent('product', {
+                id: '3937538736151',
+                node: document.getElementById('product-component-1571866932753'),
+                moneyFormat: 'R%24%20%7B%7Bamount_with_comma_separator%7D%7D',
+                options: {
+                  "product": {
+                    "styles": {
+                      "product": {
+                        "@media (min-width: 601px)": {
+                          "max-width": "calc(25% - 20px)",
+                          "margin-left": "20px",
+                          "margin-bottom": "50px"
+                        }
+                      },
+                      "button": {
+                        "font-size": "16px",
+                        "padding-top": "16px",
+                        "padding-bottom": "16px",
+                        ":hover": {
+                          "background-color": "#00a71a"
+                        },
+                        "background-color": "#00ba1d",
+                        ":focus": {
+                          "background-color": "#00a71a"
+                        },
+                        "border-radius": "6px",
+                        "padding-left": "55px",
+                        "padding-right": "55px"
+                      },
+                      "quantityInput": {
+                        "font-size": "16px",
+                        "padding-top": "16px",
+                        "padding-bottom": "16px"
+                      }
+                    },
+                    "contents": {
+                      "img": false,
+                      "title": false,
+                      "price": false
+                    },
+                    "text": {
+                      "button": "COMPRAR AGORA COM DESCONTO"
+                    }
+                  },
+                  "productSet": {
+                    "styles": {
+                      "products": {
+                        "@media (min-width: 601px)": {
+                          "margin-left": "-20px"
+                        }
+                      }
+                    }
+                  },
+                  "modalProduct": {
+                    "contents": {
+                      "img": false,
+                      "imgWithCarousel": true,
+                      "button": false,
+                      "buttonWithQuantity": true
+                    },
+                    "styles": {
+                      "product": {
+                        "@media (min-width: 601px)": {
+                          "max-width": "100%",
+                          "margin-left": "0px",
+                          "margin-bottom": "0px"
+                        }
+                      },
+                      "button": {
+                        "font-size": "16px",
+                        "padding-top": "16px",
+                        "padding-bottom": "16px",
+                        ":hover": {
+                          "background-color": "#00a71a"
+                        },
+                        "background-color": "#00ba1d",
+                        ":focus": {
+                          "background-color": "#00a71a"
+                        },
+                        "border-radius": "6px",
+                        "padding-left": "55px",
+                        "padding-right": "55px"
+                      },
+                      "quantityInput": {
+                        "font-size": "16px",
+                        "padding-top": "16px",
+                        "padding-bottom": "16px"
+                      }
+                    }
+                  },
+                  "cart": {
+                    "styles": {
+                      "button": {
+                        "font-size": "16px",
+                        "padding-top": "16px",
+                        "padding-bottom": "16px",
+                        ":hover": {
+                          "background-color": "#00a71a"
+                        },
+                        "background-color": "#00ba1d",
+                        ":focus": {
+                          "background-color": "#00a71a"
+                        },
+                        "border-radius": "6px"
+                      },
+                      "title": {
+                        "color": "#4c4c4c"
+                      },
+                      "header": {
+                        "color": "#4c4c4c"
+                      },
+                      "lineItems": {
+                        "color": "#4c4c4c"
+                      },
+                      "subtotalText": {
+                        "color": "#4c4c4c"
+                      },
+                      "subtotal": {
+                        "color": "#4c4c4c"
+                      },
+                      "notice": {
+                        "color": "#4c4c4c"
+                      },
+                      "currency": {
+                        "color": "#4c4c4c"
+                      },
+                      "close": {
+                        "color": "#4c4c4c",
+                        ":hover": {
+                          "color": "#4c4c4c"
+                        }
+                      },
+                      "empty": {
+                        "color": "#4c4c4c"
+                      },
+                      "noteDescription": {
+                        "color": "#4c4c4c"
+                      },
+                      "discountText": {
+                        "color": "#4c4c4c"
+                      },
+                      "discountIcon": {
+                        "fill": "#4c4c4c"
+                      },
+                      "discountAmount": {
+                        "color": "#4c4c4c"
+                      }
+                    },
+                    "text": {
+                      "title": "Carrinho",
+                      "empty": "Seu carrinho está vazio.",
+                      "notice": "Códigos de envio e desconto são adicionados no fim da compra.",
+                      "button": "COMPRAR AGORA"
+                    }
+                  },
+                  "toggle": {
+                    "styles": {
+                      "toggle": {
+                        "background-color": "#00ba1d",
+                        ":hover": {
+                          "background-color": "#00a71a"
+                        },
+                        ":focus": {
+                          "background-color": "#00a71a"
+                        }
+                      },
+                      "count": {
+                        "font-size": "16px"
+                      }
+                    }
+                  },
+                  "lineItem": {
+                    "styles": {
+                      "variantTitle": {
+                        "color": "#4c4c4c"
+                      },
+                      "title": {
+                        "color": "#4c4c4c"
+                      },
+                      "price": {
+                        "color": "#4c4c4c"
+                      },
+                      "fullPrice": {
+                        "color": "#4c4c4c"
+                      },
+                      "discount": {
+                        "color": "#4c4c4c"
+                      },
+                      "discountIcon": {
+                        "fill": "#4c4c4c"
+                      },
+                      "quantity": {
+                        "color": "#4c4c4c"
+                      },
+                      "quantityIncrement": {
+                        "color": "#4c4c4c",
+                        "border-color": "#4c4c4c"
+                      },
+                      "quantityDecrement": {
+                        "color": "#4c4c4c",
+                        "border-color": "#4c4c4c"
+                      },
+                      "quantityInput": {
+                        "color": "#4c4c4c",
+                        "border-color": "#4c4c4c"
+                      }
+                    }
+                  }
+                },
+              });
+            });
+          }
+        })();
+    </script>
 
 </body>

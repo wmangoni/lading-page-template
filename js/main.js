@@ -291,6 +291,15 @@
         }
     };
 
+    var mouseHoverImg = function() {
+        $('.home-content__right').on('mouseover', function() {
+            $('#ip').hide();$('#ipt').show();
+        });
+        $('.home-content__right').on('mouseleave', function() {
+            $('#ipt').hide();$('#ip').show();
+        });
+    };
+
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -306,6 +315,7 @@
         ssAOS();
         ssBackToTop();
         ssAjaxChimp();
+        mouseHoverImg();
 
     })();
 

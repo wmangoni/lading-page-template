@@ -3332,11 +3332,11 @@ html.no-csstransitions .home-content__main {
 
 .testimonials-header {
   text-align: center;
-  padding-top: 6.4rem;
+  /*padding-top: 6.4rem;*/
   position: relative;
 }
 
-.testimonials-header::before {
+/*.testimonials-header::before {
   content: "";
   display: inline-block;
   height: 1px;
@@ -3349,7 +3349,7 @@ html.no-csstransitions .home-content__main {
   -ms-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
 }
-
+*/
 .testimonials {
   font-family: "Nunito Sans", sans-serif;
   font-weight: normal;
@@ -3453,7 +3453,9 @@ html.no-csstransitions .home-content__main {
 .s-pricing {
   padding-top: 19.2rem;
   padding-bottom: 16rem;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(53,3,3,1) 35%, rgba(35,6,6,1) 74%, rgba(98,23,8,1) 100%);
   position: relative;
 }
 
@@ -4234,30 +4236,31 @@ html.no-csstransitions .home-content__main {
 
 .box-price {
   position: absolute;
-  top: 29%;
-  right: 90px;
-  border: 1px solid #621708;
+  top: 25%;
+  right: 50px;
+  /* border: 1px solid #ffbd00; */
   border-left: none;
   border-radius: 10px;
-  padding: 10px 40px 0px 70px;
-  /*background: linear-gradient(45deg, black, transparent);*/
+  padding: 10px 40px 22px 27px;
+  background: linear-gradient(90deg, #222 23%, transparent) !important;
   z-index: 1;
 }
 
 .garanta {
   font-size: 30px;
-  color: #7e1426;
+  color: #f1f1f1;
   text-transform: uppercase;
-  text-shadow: 4px 3px 4px #dccd16, -4px -3px 4px #dc5f16;
+  text-shadow: 0px 0px 12px #fff;
   font-weight: 600;
 }
 
 .price-de {
-  color: #BC3908;
+  color: #f1f1f1;
+  text-decoration: line-through;
 }
 
 .price-por {
-  color: #941B0C;
+  color: #ffbd00;
   font-size: 48px;
   font-weight: 700;
   margin: 0;
