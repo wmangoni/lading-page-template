@@ -320,7 +320,16 @@
                     </div>
 
                 </div> <!-- end process__steps -->
+
+
            </div> <!-- end process -->
+           
+            <div class="home-content__btn-wrap" style="text-align: center;">
+                <a href="#pricing" class="btn btn--primary home-content__btn smoothscroll font-size-20 heartbeat">
+                    Compre agora
+                </a>
+            </div>
+        
         </div> <!-- end about-how -->
 
     </section> <!-- end s-about-how -->
@@ -331,7 +340,7 @@
             <div class="col-full">
                 <h2 class="" style="color: #fff;">Dê uma olhadinha nas características do produto</h2>
             </div>
-            <div class="col-six" style="position: sticky; top: 78px" data-aos="fade-right">
+            <div class="col-six p-s" data-aos="fade-right">
                 <img src="images/lp2-imgs/banner.png">
             </div>
 
@@ -578,14 +587,29 @@
             </div>
 
             <div class="final-price">
-                <img src="images/lp2-imgs/pdd.png">
+                <img src="images/lp2-imgs/ptt.png">
                 <div class="box-price">
                     <span class="garanta">Garanta o seu</span><br />
                     <span class="price-de">de R$ 435,90</span><br />
                     <span>por</span><br />
                     <h1 class="price-por">R$ 217,90</h1>
-                    <!-- <button class="btn">Comprar agora</button> -->
-                    <div id='product-component-1571866932753'></div>
+                    <select id="select-variant" name="variant">
+                          <option value="Preto">Preto</option>
+                          <option value="Dourado">Dourado</option>
+                          <option value="Preto c/ Branco">Preto c/ Branco</option>
+                          <option value="Preto c/ Verde" selected="">Preto c/ Verde</option>
+                          <option value="Preto c/ Verde + Pulseira Extra Bege">Preto c/ Verde + Pulseira Extra Bege</option>
+                          <option value="Preto + Pulseira Extra Preta">Preto + Pulseira Extra Preta</option>
+                          <option value="Branco + Pulseira Extra Preta">Branco + Pulseira Extra Preta</option>
+                          <option value="Preto C/ Verde + Pulseira Extra Preta">Preto C/ Verde + Pulseira Extra Preta</option>
+                          <option value="Branco + Pulseira Extra Verde C/ Preto">Branco + Pulseira Extra Verde C/ Preto</option>
+                          <option value="Branco + Pulseira Extra Bege">Branco + Pulseira Extra Bege</option>
+                          <option value="Dourado + Pulseira Extra Preto C/ Verde">Dourado + Pulseira Extra Preto C/ Verde</option>
+                          <option value="Dourado + Pulseira Extra Preta">Dourado + Pulseira Extra Preta</option>
+                      </select>
+                    <button id="btn-comprar" class="btn">Comprar agora</button>
+                    <!-- <a class="buy_now" href="https://top-tec-store.myshopify.com/a/secure?add=29432093638679:1">COMPRAR AGORA!</a> -->
+                    <!-- <div id='product-component-1571968639056'></div> -->
                 </div>
             </div>
 
@@ -790,8 +814,111 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/video.js"></script>
-    
     <script type="text/javascript">
+        var meta = {
+            "product": {
+                "id": 3937538736151,
+                "vendor": "TOP TEC STORE",
+                "type": "",
+                "variants": [{
+                    "id": 30593366589463,
+                    "price": 21790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto",
+                    "public_title": "Preto",
+                    "sku": "30473035-black"
+                }, {
+                    "id": 30593366622231,
+                    "price": 21790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Dourado",
+                    "public_title": "Dourado",
+                    "sku": "30473035-gold"
+                }, {
+                    "id": 30593366654999,
+                    "price": 21790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Branco",
+                    "public_title": "Preto c/ Branco",
+                    "sku": "30473035-black-white"
+                }, {
+                    "id": 30593366687767,
+                    "price": 21790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Verde",
+                    "public_title": "Preto c/ Verde",
+                    "sku": "30473035-black-green"
+                }, {
+                    "id": 30593366720535,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Verde + Pulseira Extra Bege",
+                    "public_title": "Preto c/ Verde + Pulseira Extra Bege",
+                    "sku": "30473035-green-add-gold"
+                }, {
+                    "id": 30593366753303,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto + Pulseira Extra Preta",
+                    "public_title": "Preto + Pulseira Extra Preta",
+                    "sku": "30473035-black-add-black"
+                }, {
+                    "id": 30593366786071,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Branco + Pulseira Extra Preta",
+                    "public_title": "Branco + Pulseira Extra Preta",
+                    "sku": "30473035-white-add-black"
+                }, {
+                    "id": 30593366818839,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto C/ Verde + Pulseira Extra Preta",
+                    "public_title": "Preto C/ Verde + Pulseira Extra Preta",
+                    "sku": "30473035-green-add-black"
+                }, {
+                    "id": 30593366851607,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Branco + Pulseira Extra Verde C/ Preto",
+                    "public_title": "Branco + Pulseira Extra Verde C/ Preto",
+                    "sku": "30473035-white-add-green"
+                }, {
+                    "id": 30593366884375,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Branco + Pulseira Extra Bege",
+                    "public_title": "Branco + Pulseira Extra Bege",
+                    "sku": "30473035-white-add-gold"
+                }, {
+                    "id": 30593366917143,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Dourado + Pulseira Extra Preto C/ Verde",
+                    "public_title": "Dourado + Pulseira Extra Preto C/ Verde",
+                    "sku": "30473035-gold-add-green"
+                }, {
+                    "id": 30593366949911,
+                    "price": 23790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Dourado + Pulseira Extra Preta",
+                    "public_title": "Dourado + Pulseira Extra Preta",
+                    "sku": "30473035-gold-add-black"
+                }]
+            },
+            "page": {
+                "pageType": "product",
+                "resourceType": "product",
+                "resourceId": 3937538736151
+            }
+        };
+
+        var variante, url = 'https://top-tec-store.myshopify.com/a/secure?add=30593366589463:1';
+
+        $('#select-variant').on('change', function(e) {
+            
+            variante = meta.product.variants.filter(el => {
+                return el.public_title === $(this).val()
+            });
+            console.log('variante', variante);
+            url = 'https://top-tec-store.myshopify.com/a/secure?add=' + variante[0].id + ':1';
+        });
+
+        $('#btn-comprar').on('click', function(e) {
+            window.location = url;
+        });
+
+    </script>
+    <!-- <script type="text/javascript">
+        /*<![CDATA[*/
         (function () {
           var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
           if (window.ShopifyBuy) {
@@ -818,7 +945,7 @@
             ShopifyBuy.UI.onReady(client).then(function (ui) {
               ui.createComponent('product', {
                 id: '3937538736151',
-                node: document.getElementById('product-component-1571866932753'),
+                node: document.getElementById('product-component-1571968639056'),
                 moneyFormat: 'R%24%20%7B%7Bamount_with_comma_separator%7D%7D',
                 options: {
                   "product": {
@@ -851,13 +978,14 @@
                         "padding-bottom": "16px"
                       }
                     },
+                    "buttonDestination": "checkout",
                     "contents": {
                       "img": false,
                       "title": false,
                       "price": false
                     },
                     "text": {
-                      "button": "COMPRAR AGORA COM DESCONTO"
+                      "button": "COMPRAR AGORA"
                     }
                   },
                   "productSet": {
@@ -1029,6 +1157,8 @@
             });
           }
         })();
-    </script>
+        /*]]>*/
+    </script> -->
 
 </body>
+</html>
