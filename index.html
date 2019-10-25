@@ -68,7 +68,7 @@
                 </ul>
     
                 <div class="header-cta">
-                    <a href="#pricing" class="btn btn--primary header-cta__btn smoothscroll font-size-20">Compre agora</a>
+                    <a href="#" class="btn btn--primary header-cta__btn font-size-20">Compre agora</a>
                 </div>
             </nav> <!-- end header-nav-wrap -->
     
@@ -98,7 +98,7 @@
                     </h3>
     
                     <div class="home-content__btn-wrap">
-                        <a href="#pricing" class="btn btn--primary home-content__btn smoothscroll font-size-20">
+                        <a href="#" class="btn btn--primary home-content__btn font-size-20">
                             Compre agora
                         </a>
                     </div>
@@ -325,7 +325,7 @@
            </div> <!-- end process -->
            
             <div class="home-content__btn-wrap" style="text-align: center;">
-                <a href="#pricing" class="btn btn--primary home-content__btn smoothscroll font-size-20 heartbeat">
+                <a href="#" class="btn btn--primary home-content__btn font-size-20 heartbeat">
                     Compre agora
                 </a>
             </div>
@@ -815,6 +815,7 @@
     <script src="js/main.js"></script>
     <script src="js/video.js"></script>
     <script type="text/javascript">
+    (function($) {
         var meta = {
             "product": {
                 "id": 3937538736151,
@@ -915,6 +916,16 @@
         $('#btn-comprar').on('click', function(e) {
             window.location = url;
         });
+
+        $('.btn--primary.header-cta__btn').on('click', function(e) {
+            $('html, body').animate({ scrollTop: $('.final-price').offset().top }, 'normal');
+        });
+        $('.home-content__btn').on('click', function(e) {
+            $('html, body').animate({ scrollTop: $('.final-price').offset().top }, 'normal');
+        });
+
+        //$('html, body').animate({ scrollTop: 0 }, 'normal');
+    })(jQuery);
 
     </script>
     <!-- <script type="text/javascript">
