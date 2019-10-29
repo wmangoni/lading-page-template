@@ -219,7 +219,9 @@
 
                 <!-- <div class="filter"></div> -->
                 
-                <video autoplay loop muted playsinline src="videos/boxing/Boxing-gym.mp4" class="fillWidth"></video>
+                <video autoplay loop muted playsinline poster="videos/boxing/Boxing-gym.jpg" class="fillWidth lazy">
+                    <source data-src="videos/boxing/Boxing-gym.mp4" type="video/mp4">
+                </video>
                 
                 <div class="poster hidden">
                     <img src="videos/boxing/Boxing-gym.jpg" alt="">
@@ -283,7 +285,7 @@
 
             </div>
             
-            <img class="img-features" src="images/lp2-imgs/features.png" alt="">
+            <img class="img-features" src="images/lp2-imgs/features-tiny.png" alt="">
 
         </div>
 
@@ -357,7 +359,7 @@
                     </div>
 
                     <div class="col-block step">
-                        <img src="images/lp2-imgs/gif.gif"> 
+                        <img class="lazy"  src="images/lp2-imgs/x.jpeg" data-src="images/lp2-imgs/gif.gif" data-srcset="images/lp2-imgs/gif.gif""> 
                     </div>
 
                     <div class="col-block step ctr">
@@ -367,7 +369,7 @@
                     </div>
 
                     <div class="col-block step">
-                        <img src="images/lp2-imgs/redes-sociais.gif"> 
+                        <img class="lazy"  src="images/lp2-imgs/x.jpeg" data-src="images/lp2-imgs/redes-sociais.gif" data-srcset="images/lp2-imgs/redes-sociais.gif"> 
                     </div>
                
                     <div class="col-block step ctr">
@@ -377,7 +379,7 @@
                     </div>
 
                     <div class="col-block step">
-                        <img src="images/lp2-imgs/saude.gif"> 
+                        <img class="lazy"  src="images/lp2-imgs/x.jpeg" data-src="images/lp2-imgs/saude.gif" data-srcset="images/lp2-imgs/saude.gif""> 
                     </div>
 
                     <div class="col-block step ctr">
@@ -387,7 +389,7 @@
                     </div>
 
                     <div class="col-block step">
-                        <img src="images/lp2-imgs/tela-hd.gif"> 
+                        <img class="lazy"  src="images/lp2-imgs/x.jpeg" data-src="images/lp2-imgs/tela-hd.gif" data-srcset="images/lp2-imgs/tela-hd.gif"> 
                     </div>
 
                 </div> <!-- end process__steps -->
@@ -412,7 +414,7 @@
                 <h2 class="" style="color: #fff;">Dê uma olhadinha nas características do produto</h2>
             </div>
             <div class="col-six p-s" data-aos="fade-right">
-                <img src="images/lp2-imgs/banner.png">
+                <img src="images/lp2-imgs/banner-tiny.png">
             </div>
 
             <div class="col-six features-list" >
@@ -651,7 +653,7 @@
         <div class="row plans block-1-2 block-m-1-2 block-tab-full stack">
 
             <div class="selos">
-                <img src="images/lp2-imgs/selos-gold.png"/>
+                <img src="images/lp2-imgs/selos-gold-tiny.png"/>
                 <!-- <img src="images/lp-imgs/selo-compra-segura-150px.png"/>
                 <img src="images/lp-imgs/selo-garantia-30-dias-150px.png"/>
                 <img src="images/lp-imgs/selo-melhor-preco-dias-150px.png"/>
@@ -660,7 +662,7 @@
             </div>
 
             <div class="final-price">
-                <img src="images/lp2-imgs/uu.png">
+                <img src="images/lp2-imgs/uu-tiny.png">
                 <div class="box-price">
                     <span class="garanta">Garanta o seu</span><br />
                     <span class="price-de">de R$ 435,90</span><br />
@@ -997,8 +999,66 @@
             $('html, body').animate({ scrollTop: $('.final-price').offset().top }, 'normal');
         });
 
+
         //$('html, body').animate({ scrollTop: 0 }, 'normal');
     })(jQuery);
+
+    //===========================================
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+      if ("IntersectionObserver" in window) {
+        console.log('IntersectionObserver');
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            
+            console.log('new');
+            
+            entries.forEach(function(entry) {
+                console.log('foreach');
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    console.log('isIntersecting', lazyImage.dataset.src);
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.srcset = lazyImage.dataset.srcset;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+               }
+            });
+        });
+
+        var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(video) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
+            }
+          });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+        
+        lazyVideos.forEach(function(lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+
+      } else {
+        // Possibly fall back to a more compatible method here
+      }
+    });
+
+    //====================================
 
     </script>
     <!-- <script type="text/javascript">
