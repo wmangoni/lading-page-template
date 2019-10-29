@@ -2911,7 +2911,7 @@ html.no-csstransitions .home-content__main {
  * ## process
  * ------------------------------------------------------------------- */
 .process-wrap {
-  margin-top: 12rem;
+  margin-top: 32rem;
 }
 
 .process-wrap h2 {
@@ -4376,21 +4376,51 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+.mobile-container-fixe {
+  width: 100%;
+}
+#select-variant-mobile {
+  background: #fff;
+  padding: 2px;
+  height: 36px;
+  width: calc(100% - 6px);
+  border-radius: 2px;
+  margin: 3px;
+}
+#btn-comprar-mobile {
+  width: calc(100% - 6px);
+  background: green;
+  border: 1px solid orange;
+  color: #fff;
+  font-size: 20px;
+  font-family: calibri;
+  margin: 3px;
+  line-height: inherit;
+  height: 40px;
+}
 
+@media only screen and (min-width:600px) {
+  #select-variant-mobile, #btn-comprar-mobile {
+    display: none;
+  }
+}
 
 @media only screen and (max-width:600px) {
   .p-s {
     position: relative;
     top: 0;
   }
+
   .final-price img {
     margin-left: 0;
   }
+
   .box-price {
     right: 0;
     padding: 10px;
     top: 10%;
   }
+
   .bandeiras-cartao {
     position: absolute;
     bottom: 82px;
@@ -4399,5 +4429,16 @@ html.no-csstransitions .home-content__main {
 
   #pricing {
     height: 1560px;
+  }
+
+  .mobile-container-fixe {
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    background: linear-gradient(0deg, black, transparent);
+  }
+
+  .mobile-hidden {
+    display: none;
   }
 }
