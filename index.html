@@ -6,8 +6,8 @@
     ================================================== -->
     <meta charset="utf-8">
     <title>Smart Watch IWO 8 PRO</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Smart Watch IWO 8 PRO - Frete Grátis O mais vendido da categoria.">
+    <meta name="author" content="Top Tec Store">
 
     <!-- mobile specific metas
     ================================================== -->
@@ -36,6 +36,16 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-145094264-1');
+    </script> -->
+
+    <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-145094264-1', 'auto');
+        ga('send', 'pageview');
     </script> -->
 
     <script type="text/javascript" data-cfasync="false">
@@ -761,9 +771,9 @@
                 <img id="product-img-final" src="images/lp2-imgs/uu-tiny.png" data-opa="images/lp2-imgs/duo.png" data-opb="images/lp2-imgs/uu-tiny.png">
                 <div class="box-price">
                     <span class="garanta">Garanta o seu</span><br />
-                    <span class="price-de">de R$ 435,90</span><br />
+                    <span id="price-de-label" class="price-de">de R$ 512,86</span><br />
                     <span>por</span><br />
-                    <h1 class="price-por">R$ 217,90</h1>
+                    <h1 id="final-price-label" class="price-por">R$ 379,90</h1>
                     <select id="select-variant" name="variant" class="mobile-hidden">
                           <option value="Preto">Preto</option>
                           <option value="Dourado">Dourado</option>
@@ -1152,6 +1162,13 @@
             });
             console.log('variante', variante);
             url = 'https://top-tec-store.myshopify.com/a/secure?add=' + variante[0].id + ':1';
+
+            let price = variante[0].price.toString().slice(0,3) + ',' + variante[0].price.toString().slice(3,5);
+            let p_de = variante[0].price * 1.35;
+            let pride_de = p_de.toString().slice(0,3) + ',' + p_de.toString().slice(3,5);
+
+            $('#final-price-label').text('R$ ' + price);
+            $('#price-de-label').text('de R$ ' + pride_de);
 
             // if ($(this).val().indexOf('Combo') !== -1) {
             //     $('#product-img-final').attr('src', $('#product-img-final').data('opa'));
