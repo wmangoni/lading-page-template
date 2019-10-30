@@ -87,7 +87,12 @@
             __gaTracker('create', 'UA-145094264-1', 'auto');
             __gaTracker('set', 'forceSSL', true);
             __gaTracker('require', 'displayfeatures');
-            __gaTracker('send', 'pageview');
+            __gaTracker('send', {
+                          hitType: 'event',
+                          eventCategory: 'Lading Page',
+                          eventAction: 'visit',
+                          eventLabel: 'IWO 8'
+                        });
         } else {
             console.log("");
             (function() {
