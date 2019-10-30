@@ -29,13 +29,99 @@
     <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/0228/8582/6624/t/9/assets/favicon.png?2110" type="image/x-icon">
     <link rel="icon" href="https://cdn.shopify.com/s/files/1/0228/8582/6624/t/9/assets/favicon.png?2110" type="image/x-icon">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145094264-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145094264-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-145094264-1');
+    </script> -->
+
+    <script type="text/javascript" data-cfasync="false">
+        var mi_version = '7.9.0';
+        var mi_track_user = true;
+        var mi_no_track_reason = '';
+
+        var disableStr = 'ga-disable-UA-145094264-1';
+
+        /* Function to detect opted out users */
+        function __gaTrackerIsOptedOut() {
+            return document.cookie.indexOf(disableStr + '=true') > -1;
+        }
+
+        /* Disable tracking if the opt-out cookie exists. */
+        if (__gaTrackerIsOptedOut()) {
+            window[disableStr] = true;
+        }
+
+        /* Opt-out function */
+        function __gaTrackerOptout() {
+            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[disableStr] = true;
+        }
+
+        if (mi_track_user) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', '__gaTracker');
+
+            __gaTracker('create', 'UA-145094264-1', 'auto');
+            __gaTracker('set', 'forceSSL', true);
+            __gaTracker('require', 'displayfeatures');
+            __gaTracker('send', 'pageview');
+        } else {
+            console.log("");
+            (function() {
+                /* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+                var noopfn = function() {
+                    return null;
+                };
+                var noopnullfn = function() {
+                    return null;
+                };
+                var Tracker = function() {
+                    return null;
+                };
+                var p = Tracker.prototype;
+                p.get = noopfn;
+                p.set = noopfn;
+                p.send = noopfn;
+                var __gaTracker = function() {
+                    var len = arguments.length;
+                    if (len === 0) {
+                        return;
+                    }
+                    var f = arguments[len - 1];
+                    if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+                        console.log('Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason);
+                        return;
+                    }
+                    try {
+                        f.hitCallback();
+                    } catch (ex) {
+
+                    }
+                };
+                __gaTracker.create = function() {
+                    return new Tracker();
+                };
+                __gaTracker.getByName = noopnullfn;
+                __gaTracker.getAll = function() {
+                    return [];
+                };
+                __gaTracker.remove = noopfn;
+                window['__gaTracker'] = __gaTracker;
+            })();
+        }
     </script>
 
     <!-- https://developers.facebook.com/docs/analytics/quickstart-list/web/ -->
@@ -566,7 +652,7 @@
                 <div class="col-full slick-slider testimonials__slider">
 
                     <div class="testimonials__slide">
-                        <img src="images/lp2-imgs/avatar-h.png" alt="Author image" class="testimonials__avatar">
+                        <img src="https://ae01.alicdn.com/kf/Ua4254f1f3a1a471c99b8b17ab47d97aaD.jpg" alt="Author image" class="testimonials__avatar">
                         
                         <p>Muito bom, totalmente funcional em conjunto com meu celular, e me ajuda bastante nas atividades físicas.</p>
 
@@ -577,7 +663,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/lp2-imgs/avatar-m.png" alt="Author image" class="testimonials__avatar">
+                        <img src="https://ae01.alicdn.com/kf/Uee880481cde04941b4cf51d5e2c74f6aj.jpg" alt="Author image" class="testimonials__avatar">
                         
                         <p>Muito boa a qualidade do Smart watch. Chegou muito rápido e em perfeito estado. Funciona perfeitamente bem, recomendo o vendedor e o relógio.</p>
 
@@ -588,7 +674,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/lp2-imgs/avatar-h.png" alt="Author image" class="testimonials__avatar">
+                        <img src="https://ae01.alicdn.com/kf/U10aee686067546dcb524922a69e202978.jpg" alt="Author image" class="testimonials__avatar">
                         
                         <p>Excelente produto. Entrega muito rápida. Vendedor super atencioso, me deu total suporte, demorou alguns dias á mais, porém foi por conta dos correios.</p>
                         
@@ -599,7 +685,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/lp2-imgs/avatar-m.png" alt="Author image" class="testimonials__avatar">
+                        <img src="https://alireviews-cdn.fireapps.vn/images/avatar/abstract/avatar72.jpg" alt="Author image" class="testimonials__avatar">
                         
                         <p>Produto bem embalado, chegou em 25 dias corridos aqui no RS, bom demaiss.</p>
 
@@ -610,7 +696,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/lp2-imgs/avatar-h.png" alt="Author image" class="testimonials__avatar">
+                        <img src="https://ae01.alicdn.com/kf/UTB8SkVjxT_IXKJkSalUq6yBzVXad.jpg" alt="Author image" class="testimonials__avatar">
                         
                         <p>Gostei do produto, a entrega foi feita dentro do prazo e o relógio tem boas funcionalidades</p>
 
@@ -623,6 +709,18 @@
                 </div> <!-- end testimonials__slider -->
 
             </div> <!-- end testimonials -->
+
+            <div class="row testimonials-videos" style="">
+                <h2 style="text-align: center;">Veja os depoimentos em vídeo</h2>
+
+                <div class="video-container">
+                    <iframe style="border: 1px solid #ffd345;" width="100%" height="100%" src="https://www.youtube.com/embed/0pWxmFs_04o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-container">
+                    <iframe style="border: 1px solid #ffd345;" width="100%" height="100%" src="https://www.youtube.com/embed/HWq5AAumMLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
 
         </div> <!-- end testimonials-wrap -->
 
@@ -660,7 +758,7 @@
             </div>
 
             <div class="final-price">
-                <img src="images/lp2-imgs/uu-tiny.png">
+                <img id="product-img-final" src="images/lp2-imgs/uu-tiny.png" data-opa="images/lp2-imgs/duo.png" data-opb="images/lp2-imgs/uu-tiny.png">
                 <div class="box-price">
                     <span class="garanta">Garanta o seu</span><br />
                     <span class="price-de">de R$ 435,90</span><br />
@@ -670,7 +768,7 @@
                           <option value="Preto">Preto</option>
                           <option value="Dourado">Dourado</option>
                           <option value="Preto c/ Branco">Preto c/ Branco</option>
-                          <option value="Preto c/ Verde" selected="">Preto c/ Verde</option>
+                          <option value="Preto c/ Verde">Preto c/ Verde</option>
                           <option value="Preto c/ Verde + Pulseira Extra Bege">Preto c/ Verde + Pulseira Extra Bege</option>
                           <option value="Preto + Pulseira Extra Preta">Preto + Pulseira Extra Preta</option>
                           <option value="Branco + Pulseira Extra Preta">Branco + Pulseira Extra Preta</option>
@@ -679,6 +777,16 @@
                           <option value="Branco + Pulseira Extra Bege">Branco + Pulseira Extra Bege</option>
                           <option value="Dourado + Pulseira Extra Preto C/ Verde">Dourado + Pulseira Extra Preto C/ Verde</option>
                           <option value="Dourado + Pulseira Extra Preta">Dourado + Pulseira Extra Preta</option>
+                          <option value="Combo: Branco + Preto C/ Verde">Combo: Branco + Preto C/ Verde</option>
+                          <option value="Combo: Branco + Branco">Combo: Branco + Branco</option>
+                          <option value="Combo: Dourado + Preto C/ Verde" selected="">Combo: Dourado + Preto C/ Verde</option>
+                          <option value="Combo: Dourado + Dourado">Combo: Dourado + Dourado</option>
+                          <option value="Combo: Dourado + Branco">Combo: Dourado + Branco</option>
+                          <option value="Combo: Preto + Preto C/ Verde">Combo: Preto + Preto C/ Verde</option>
+                          <option value="Combo: Preto + Dourado">Combo: Preto + Dourado</option>
+                          <option value="Combo: Preto + Branco">Combo: Preto + Branco</option>
+                          <option value="Combo: Preto + Preto">Combo: Preto + Preto</option>
+                          <option value="Combo: Preto C/ Verde + Preto C/ Verde">Combo: Preto C/ Verde + Preto C/ Verde</option>
                       </select>
                     <button id="btn-comprar" class="btn mobile-hidden">Comprar agora</button>
                     <!-- <a class="buy_now" href="https://top-tec-store.myshopify.com/a/secure?add=29432093638679:1">COMPRAR AGORA!</a> -->
@@ -895,11 +1003,17 @@
                 "vendor": "TOP TEC STORE",
                 "type": "",
                 "variants": [{
-                    "id": 30593366589463,
+                    "id": 30593366687767,
                     "price": 21790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto",
-                    "public_title": "Preto",
-                    "sku": "30473035-black"
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c\/ Verde",
+                    "public_title": "Preto c\/ Verde",
+                    "sku": "30473035-black-green"
+                }, {
+                    "id": 30593366654999,
+                    "price": 21790,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c\/ Branco",
+                    "public_title": "Preto c\/ Branco",
+                    "sku": "30473035-black-white"
                 }, {
                     "id": 30593366622231,
                     "price": 21790,
@@ -907,22 +1021,76 @@
                     "public_title": "Dourado",
                     "sku": "30473035-gold"
                 }, {
-                    "id": 30593366654999,
+                    "id": 30593366589463,
                     "price": 21790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Branco",
-                    "public_title": "Preto c/ Branco",
-                    "sku": "30473035-black-white"
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto",
+                    "public_title": "Preto",
+                    "sku": "30473035-black"
                 }, {
-                    "id": 30593366687767,
-                    "price": 21790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Verde",
-                    "public_title": "Preto c/ Verde",
-                    "sku": "30473035-black-green"
+                    "id": 31045872779287,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Branco + Preto C\/ Verde",
+                    "public_title": "Combo: Branco + Preto C\/ Verde",
+                    "sku": "branco-pretocverde-combo"
+                }, {
+                    "id": 31045872451607,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Branco + Branco",
+                    "public_title": "Combo: Branco + Branco",
+                    "sku": "branco-branco-combo"
+                }, {
+                    "id": 31045871829015,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Dourado + Preto C\/ Verde",
+                    "public_title": "Combo: Dourado + Preto C\/ Verde",
+                    "sku": "dourado-pretocverde-combo"
+                }, {
+                    "id": 31045870288919,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Dourado + Dourado",
+                    "public_title": "Combo: Dourado + Dourado",
+                    "sku": "dourado-dourado-combo"
+                }, {
+                    "id": 31045871271959,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Dourado + Branco",
+                    "public_title": "Combo: Dourado + Branco",
+                    "sku": "dourado-branco-combo"
+                }, {
+                    "id": 31045869994007,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Preto + Preto C\/ Verde",
+                    "public_title": "Combo: Preto + Preto C\/ Verde",
+                    "sku": "preto-pretocverde-combo"
+                }, {
+                    "id": 31045869633559,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Preto + Dourado",
+                    "public_title": "Combo: Preto + Dourado",
+                    "sku": "preto-dourado-combo"
+                }, {
+                    "id": 31045868879895,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Preto + Branco",
+                    "public_title": "Combo: Preto + Branco",
+                    "sku": "preto-branco-combo"
+                }, {
+                    "id": 31045868224535,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Preto + Preto",
+                    "public_title": "Combo: Preto + Preto",
+                    "sku": "preto-preto-combo"
+                }, {
+                    "id": 31045873500183,
+                    "price": 37990,
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Combo: Preto C\/ Verde + Preto C\/ Verde",
+                    "public_title": "Combo: Preto C\/ Verde + Preto C\/ Verde",
+                    "sku": "pretocverde-pretocverde-combo"
                 }, {
                     "id": 30593366720535,
                     "price": 23790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c/ Verde + Pulseira Extra Bege",
-                    "public_title": "Preto c/ Verde + Pulseira Extra Bege",
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto c\/ Verde + Pulseira Extra Bege",
+                    "public_title": "Preto c\/ Verde + Pulseira Extra Bege",
                     "sku": "30473035-green-add-gold"
                 }, {
                     "id": 30593366753303,
@@ -939,14 +1107,14 @@
                 }, {
                     "id": 30593366818839,
                     "price": 23790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto C/ Verde + Pulseira Extra Preta",
-                    "public_title": "Preto C/ Verde + Pulseira Extra Preta",
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Preto C\/ Verde + Pulseira Extra Preta",
+                    "public_title": "Preto C\/ Verde + Pulseira Extra Preta",
                     "sku": "30473035-green-add-black"
                 }, {
                     "id": 30593366851607,
                     "price": 23790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Branco + Pulseira Extra Verde C/ Preto",
-                    "public_title": "Branco + Pulseira Extra Verde C/ Preto",
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Branco + Pulseira Extra Verde C\/ Preto",
+                    "public_title": "Branco + Pulseira Extra Verde C\/ Preto",
                     "sku": "30473035-white-add-green"
                 }, {
                     "id": 30593366884375,
@@ -957,8 +1125,8 @@
                 }, {
                     "id": 30593366917143,
                     "price": 23790,
-                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Dourado + Pulseira Extra Preto C/ Verde",
-                    "public_title": "Dourado + Pulseira Extra Preto C/ Verde",
+                    "name": "Smart Watch IWO 8 PRO - Frete Grátis - Dourado + Pulseira Extra Preto C\/ Verde",
+                    "public_title": "Dourado + Pulseira Extra Preto C\/ Verde",
                     "sku": "30473035-gold-add-green"
                 }, {
                     "id": 30593366949911,
@@ -984,6 +1152,12 @@
             });
             console.log('variante', variante);
             url = 'https://top-tec-store.myshopify.com/a/secure?add=' + variante[0].id + ':1';
+
+            // if ($(this).val().indexOf('Combo') !== -1) {
+            //     $('#product-img-final').attr('src', $('#product-img-final').data('opa'));
+            // } else {
+            //     $('#product-img-final').attr('src', $('#product-img-final').data('opb'));
+            // }
         });
 
         $('#btn-comprar').on('click', function(e) {
@@ -1059,248 +1233,6 @@
     //====================================
 
     </script>
-    <!-- <script type="text/javascript">
-        /*<![CDATA[*/
-        (function () {
-          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-          if (window.ShopifyBuy) {
-            if (window.ShopifyBuy.UI) {
-              ShopifyBuyInit();
-            } else {
-              loadScript();
-            }
-          } else {
-            loadScript();
-          }
-          function loadScript() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = scriptURL;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-            script.onload = ShopifyBuyInit;
-          }
-          function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
-              domain: 'top-tec-store.myshopify.com',
-              storefrontAccessToken: '3ee53d476deb7d9dc51b47e976208944',
-            });
-            ShopifyBuy.UI.onReady(client).then(function (ui) {
-              ui.createComponent('product', {
-                id: '3937538736151',
-                node: document.getElementById('product-component-1571968639056'),
-                moneyFormat: 'R%24%20%7B%7Bamount_with_comma_separator%7D%7D',
-                options: {
-                  "product": {
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "calc(25% - 20px)",
-                          "margin-left": "20px",
-                          "margin-bottom": "50px"
-                        }
-                      },
-                      "button": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        ":hover": {
-                          "background-color": "#00a71a"
-                        },
-                        "background-color": "#00ba1d",
-                        ":focus": {
-                          "background-color": "#00a71a"
-                        },
-                        "border-radius": "6px",
-                        "padding-left": "55px",
-                        "padding-right": "55px"
-                      },
-                      "quantityInput": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px"
-                      }
-                    },
-                    "buttonDestination": "checkout",
-                    "contents": {
-                      "img": false,
-                      "title": false,
-                      "price": false
-                    },
-                    "text": {
-                      "button": "COMPRAR AGORA"
-                    }
-                  },
-                  "productSet": {
-                    "styles": {
-                      "products": {
-                        "@media (min-width: 601px)": {
-                          "margin-left": "-20px"
-                        }
-                      }
-                    }
-                  },
-                  "modalProduct": {
-                    "contents": {
-                      "img": false,
-                      "imgWithCarousel": true,
-                      "button": false,
-                      "buttonWithQuantity": true
-                    },
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "100%",
-                          "margin-left": "0px",
-                          "margin-bottom": "0px"
-                        }
-                      },
-                      "button": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        ":hover": {
-                          "background-color": "#00a71a"
-                        },
-                        "background-color": "#00ba1d",
-                        ":focus": {
-                          "background-color": "#00a71a"
-                        },
-                        "border-radius": "6px",
-                        "padding-left": "55px",
-                        "padding-right": "55px"
-                      },
-                      "quantityInput": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px"
-                      }
-                    }
-                  },
-                  "cart": {
-                    "styles": {
-                      "button": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        ":hover": {
-                          "background-color": "#00a71a"
-                        },
-                        "background-color": "#00ba1d",
-                        ":focus": {
-                          "background-color": "#00a71a"
-                        },
-                        "border-radius": "6px"
-                      },
-                      "title": {
-                        "color": "#4c4c4c"
-                      },
-                      "header": {
-                        "color": "#4c4c4c"
-                      },
-                      "lineItems": {
-                        "color": "#4c4c4c"
-                      },
-                      "subtotalText": {
-                        "color": "#4c4c4c"
-                      },
-                      "subtotal": {
-                        "color": "#4c4c4c"
-                      },
-                      "notice": {
-                        "color": "#4c4c4c"
-                      },
-                      "currency": {
-                        "color": "#4c4c4c"
-                      },
-                      "close": {
-                        "color": "#4c4c4c",
-                        ":hover": {
-                          "color": "#4c4c4c"
-                        }
-                      },
-                      "empty": {
-                        "color": "#4c4c4c"
-                      },
-                      "noteDescription": {
-                        "color": "#4c4c4c"
-                      },
-                      "discountText": {
-                        "color": "#4c4c4c"
-                      },
-                      "discountIcon": {
-                        "fill": "#4c4c4c"
-                      },
-                      "discountAmount": {
-                        "color": "#4c4c4c"
-                      }
-                    },
-                    "text": {
-                      "title": "Carrinho",
-                      "empty": "Seu carrinho está vazio.",
-                      "notice": "Códigos de envio e desconto são adicionados no fim da compra.",
-                      "button": "COMPRAR AGORA"
-                    }
-                  },
-                  "toggle": {
-                    "styles": {
-                      "toggle": {
-                        "background-color": "#00ba1d",
-                        ":hover": {
-                          "background-color": "#00a71a"
-                        },
-                        ":focus": {
-                          "background-color": "#00a71a"
-                        }
-                      },
-                      "count": {
-                        "font-size": "16px"
-                      }
-                    }
-                  },
-                  "lineItem": {
-                    "styles": {
-                      "variantTitle": {
-                        "color": "#4c4c4c"
-                      },
-                      "title": {
-                        "color": "#4c4c4c"
-                      },
-                      "price": {
-                        "color": "#4c4c4c"
-                      },
-                      "fullPrice": {
-                        "color": "#4c4c4c"
-                      },
-                      "discount": {
-                        "color": "#4c4c4c"
-                      },
-                      "discountIcon": {
-                        "fill": "#4c4c4c"
-                      },
-                      "quantity": {
-                        "color": "#4c4c4c"
-                      },
-                      "quantityIncrement": {
-                        "color": "#4c4c4c",
-                        "border-color": "#4c4c4c"
-                      },
-                      "quantityDecrement": {
-                        "color": "#4c4c4c",
-                        "border-color": "#4c4c4c"
-                      },
-                      "quantityInput": {
-                        "color": "#4c4c4c",
-                        "border-color": "#4c4c4c"
-                      }
-                    }
-                  }
-                },
-              });
-            });
-          }
-        })();
-        /*]]>*/
-    </script> -->
 
 </body>
 </html>
