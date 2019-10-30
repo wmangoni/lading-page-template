@@ -1172,18 +1172,22 @@
 
         $('#select-variant').on('change', function(e) {
             
-            variante = meta.product.variants.filter(el => {
-                return el.public_title === $(this).val()
-            });
-            console.log('variante', variante);
-            url = 'https://top-tec-store.myshopify.com/a/secure?add=' + variante[0].id + ':1';
+            variante = getVariant($(this).val());
+            url = getUrl( variante[0].id );
+            atualizaPreco(variante);
 
-            let price = variante[0].price.toString().slice(0,3) + ',' + variante[0].price.toString().slice(3,5);
-            let p_de = variante[0].price * 1.35;
-            let pride_de = p_de.toString().slice(0,3) + ',' + p_de.toString().slice(3,5);
+            // if ($(this).val().indexOf('Combo') !== -1) {
+            //     $('#product-img-final').attr('src', $('#product-img-final').data('opa'));
+            // } else {
+            //     $('#product-img-final').attr('src', $('#product-img-final').data('opb'));
+            // }
+        });
 
-            $('#final-price-label').text('R$ ' + price);
-            $('#price-de-label').text('de R$ ' + pride_de);
+        $('#select-variant-mobile').on('change', function(e) {
+            
+            variante = getVariant($(this).val());
+            url = getUrl( variante[0].id );
+            atualizaPreco(variante);
 
             // if ($(this).val().indexOf('Combo') !== -1) {
             //     $('#product-img-final').attr('src', $('#product-img-final').data('opa'));
@@ -1196,12 +1200,37 @@
             window.location = url;
         });
 
+        $('#btn-comprar-mobile').on('click', function(e) {
+            window.location = url;
+        });
+
         $('.btn--primary.header-cta__btn').on('click', function(e) {
             $('html, body').animate({ scrollTop: $('.final-price').offset().top }, 'normal');
         });
         $('.home-content__btn').on('click', function(e) {
             $('html, body').animate({ scrollTop: $('.final-price').offset().top }, 'normal');
         });
+
+        function getUrl(id) {
+            return 'https://top-tec-store.myshopify.com/a/secure?add=' + id + ':1';
+        }
+
+        function getVariant(title) {
+            let v = meta.product.variants.filter(el => {
+                return el.public_title === title
+            });
+
+            return v;
+        }
+
+        function atualizaPreco(variante) {
+            let price = variante[0].price.toString().slice(0,3) + ',' + variante[0].price.toString().slice(3,5);
+            let p_de = variante[0].price * 1.35;
+            let pride_de = p_de.toString().slice(0,3) + ',' + p_de.toString().slice(3,5);
+
+            $('#final-price-label').text('R$ ' + price);
+            $('#price-de-label').text('de R$ ' + pride_de);
+        }
 
 
         //$('html, body').animate({ scrollTop: 0 }, 'normal');
